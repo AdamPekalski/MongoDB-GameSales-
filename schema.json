@@ -1,0 +1,100 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "name",
+      "platform",
+      "year",
+      "genre",
+      "publisher",
+      "sales",
+      "regions"
+    ],
+    "properties": {
+      "name": {
+        "bsonType": "string"
+      },
+      "platform": {
+        "bsonType": "string"
+      },
+      "year": {
+        "bsonType": "int"
+      },
+      "genre": {
+        "bsonType": "string"
+      },
+      "publisher": {
+        "bsonType": "string"
+      },
+      "sales": {
+        "bsonType": "object",
+        "required": [
+          "na",
+          "eu",
+          "jp",
+          "other",
+          "global"
+        ],
+        "properties": {
+          "na": {
+            "bsonType": [
+              "double",
+              "int",
+              "decimal"
+            ]
+          },
+          "eu": {
+            "bsonType": [
+              "double",
+              "int",
+              "decimal"
+            ]
+          },
+          "jp": {
+            "bsonType": [
+              "double",
+              "int",
+              "decimal"
+            ]
+          },
+          "other": {
+            "bsonType": [
+              "double",
+              "int",
+              "decimal"
+            ]
+          },
+          "global": {
+            "bsonType": [
+              "double",
+              "int",
+              "decimal"
+            ]
+          }
+        }
+      },
+      "regions": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "region",
+            "sales"
+          ],
+          "properties": {
+            "region": {
+              "bsonType": "string"
+            },
+            "sales": {
+              "bsonType": [
+                "double",
+                "int",
+                "decimal"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
